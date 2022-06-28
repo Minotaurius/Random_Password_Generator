@@ -10,8 +10,8 @@ const specialCharacters = '!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~' ;
 
 
 //Setting placeholders to store user values entered below
-const passOptions = ''
-const passHolder = ''
+var passOptions = ''
+var passHolder = ''
 
 function generatePassword() {
   var passLength = prompt('Please choose a password length for your random generated password between 8 and 128 characters');
@@ -29,18 +29,18 @@ function generatePassword() {
   var passSpecialChars = confirm('Press "OK" if you would like your random generated password to include special characters?');
 
     if(passLowerCase) {
-      passOptions = passOptions += lowercase;
+      passOptions += lowercase;
     }
     if(passUpperCase) {
-      passOptions = passOptions += uppercase;
+      passOptions += uppercase;
     }
     if(passNumerics) {
-      passOptions = passOptions += numbers;
+      passOptions += numbers;
     }
     if(passSpecialChars) {
-      passOptions = passOptions += specialCharacters;
+      passOptions += specialCharacters;
     }
-
+console.log(passOptions)
 }
 
 
