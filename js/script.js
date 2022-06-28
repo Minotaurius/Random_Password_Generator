@@ -5,7 +5,7 @@ var generateBtn = document.querySelector("#generate");
 
 const lowercase = 'abcdefghijklmnopqrstuvwxyz';
 const uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-const numbers = '1234567890';
+const numbers = '0123456789';
 const specialCharacters = '!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~' ;
 
 
@@ -42,14 +42,20 @@ function generatePassword() {
       passOptions += specialCharacters;
     }
 
+    if(passOptions.length = 0) {
+    prompt('Oops! Error, please select at LEAST one type of additional character.');
+    }
+ 
     // console.log(passOptions);
     // console.log(passLength)
-
-
+  var passCharacter = '';
   var userPassword = '';
-for (var i = 0; i < passLength; i++) {
-  var userPassword = passOptions(Math.floor(Math.random() * (passOptions.passLength-1)) );
+  if(passOptions > 0) {
+    for(i = 0; i < passLength; i++);
+    passCharacter = passOptions[Math.random(passOptions.length -1)];
+    userPassword += passCharacter;
   }
+  console.log(userPassword)
   return userPassword;
 
 }
