@@ -33,7 +33,7 @@ THEN the password is either displayed in an alert or written to the page
 ```
 ## Screenshot proving functionality of random password generator 
 
-image.png
+![image](https://user-images.githubusercontent.com/106933570/176250547-db17b766-07f0-4a77-a339-dd039005cbd0.png)
 
 ## Link to my deployed application
 
