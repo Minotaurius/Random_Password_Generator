@@ -11,7 +11,6 @@ const specialCharacters = '!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~' ;
 
 //Setting placeholders to store user values entered below
 var passOptions = ''
-var passHolder = ''
 
 function generatePassword() {
   var passLength = prompt('Please choose a password length for your random generated password between 8 and 128 characters');
@@ -22,6 +21,8 @@ function generatePassword() {
       alert('Oops! Please make sure to select a number between 8 and 128 characters :)');
       var passLength = prompt('Please choose a password length for your random generated password between 8 and 128 characters');
     }
+
+    passLength = Number(passLength)
 
   var passLowerCase = confirm('Press "OK" you like your random generated password to include lowercase letters?');
   var passUpperCase = confirm('Press "OK" if you like your random generated password to include uppercase letters?');
@@ -40,9 +41,18 @@ function generatePassword() {
     if(passSpecialChars) {
       passOptions += specialCharacters;
     }
-console.log(passOptions)
-}
 
+    // console.log(passOptions);
+    // console.log(passLength)
+
+
+  var userPassword = '';
+for (var i = 0; i < passLength; i++) {
+  var userPassword = passOptions(Math.floor(Math.random() * (passOptions.passLength-1)) );
+  }
+  return userPassword;
+
+}
 
 // Write password to the #password input
 function writePassword() {
